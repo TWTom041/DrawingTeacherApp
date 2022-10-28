@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
-<head></head>
+<html lang="enUS">
+<head>
+    <title>Drawing Part</title>
+</head>
 <body>
-<div class="v4_14">
-    <div class="v4_22"></div>
-    <div class="v4_28">
-        <div class="v4_24"></div>
-        <div class="v4_27"></div>
+<div class="main_window">
+    <div class="back"></div>
+    <div class="menus">
+        <div class="menu_page"></div>
+        <div class="menu_bar"></div>
     </div>
 </div>
 </body>
@@ -19,58 +21,55 @@ body {
     font-size: 14px;
 }
 
-.v4_14 {
+.main_window {
     width: 360px;
     height: 640px;
     background: rgba(255, 255, 255, 1);
     opacity: 1;
     position: relative;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     overflow: hidden;
 }
 
-.v4_22 {
-    width: 25px;
-    height: 0px;
-    background: url("../images/v4_22.png");
+.back {
     opacity: 1;
     position: absolute;
-    top: 38px;
-    left: 54px;
-    border: 3px solid rgba(0, 0, 0, 1);
+    top: 80px;
+    left: 30px;
+    border: solid rgba(0, 0, 0, 1);
+    padding: 8px;
+    border-width: 0 5px 5px 0;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    cursor: pointer;
 }
 
-.v4_28 {
+.menus {
     width: 360px;
     height: 681px;
-    background: url("../images/v4_28.png");
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: rgba(255, 255, 255, 1) no-repeat center center;
     background-size: cover;
     opacity: 1;
     position: absolute;
     top: 592px;
-    left: 0px;
+    left: 0;
     overflow: hidden;
 }
 
-.v4_24 {
+.menu_page {
     width: 360px;
     height: 681px;
     background: rgba(217, 217, 217, 1);
     opacity: 1;
     position: absolute;
-    top: 0px;
-    left: 0px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
     overflow: hidden;
 }
 
-.v4_27 {
+.menu_bar {
     width: 140px;
     height: 3px;
     background: rgba(95, 95, 95, 1);
@@ -78,10 +77,7 @@ body {
     position: absolute;
     top: 11px;
     left: 110px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-radius: 3px;
     overflow: hidden;
 }
 </style>

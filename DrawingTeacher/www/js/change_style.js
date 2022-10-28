@@ -3,8 +3,8 @@ file_in.addEventListener("change", ccc);
 
 function ccc() {
     var preview = document.querySelector('img');
-    var file    = file_in.files[0];
-    var reader  = new FileReader();
+    var file = file_in.files[0];
+    var reader = new FileReader();
 
     reader.onloadend = function () {
         preview.src = reader.result;
@@ -23,23 +23,23 @@ function call_change_style() {
     if (preview !== "") {
         let body = {
             "content": ori,
-            "style": preview
+            "style": preview.replace(/^data:image\/(png|jpg|jpeg);base64,/, "")
         }
         let headers = {
             "Content-Type": "application/json",
-            "Accept": "application/json"
         }
-        fetch("http://127.0.0.1/style_transfer", {
+        fetch("http://127.0.0.1:5000/style_transfer", {
             method: "POST",
             headers: headers,
-            body: body
+            mode: 'cors',
+            body: JSON.stringify(body)
         })
             .then((response) => {
                 return response.json();
             })
             .then((response) => {
                 console.log(response);
-                localStorage.setItem("original", response)
+                localStorage.setItem("original", response["stylized"])
             })
             .catch((error) => {
                 console.log(`[ERROR] ${error}`);
