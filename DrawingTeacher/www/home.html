@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="top_text">What to draw?</div>
+<div class="window">
+    <video width="384" height="384" autoplay="true" id="videoElement"></video>
+</div>
+<div class="v2_4" onclick="change_page()"></div>
+</body>
+<script type="text/javascript" src="js/home.js"></script>
+</html>
+<br/>
+<br/>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .top_text {
+        height: 50px;
+        color: rgba(43, 43, 43, 1);
+        background: rgba(183, 242, 255, 1);
+        opacity: 1;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        font-family: Noto Sans;
+        font-weight: Bold;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .window {
+        aspect-ratio: 1 / 1;
+        width: 384px;
+        height: 384px;
+        background: rgba(217, 217, 217, 1);
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        bottom: 20px;
+        right: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 75px;
+        overflow: hidden;
+
+    }
+
+    .v2_4 {
+        width: 60px;
+        height: 60px;
+        background: rgba(43, 43, 43, 1);
+        opacity: 1;
+        position: fixed;
+        top: 80%;
+        bottom: 0;
+        right: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        margin-top: 75px;
+    }
+</style>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="top_text">Change style?</div>
+<label>
+    <input type="file" class="choose_style">
+</label>
+<img src="" alt="">
+<div class="buttons">
+    <span class="no">No, thanks.</span>
+    <span class="yes" onclick="call_change_style();">Yes</span>
+    </div>
+</div>
+<div class="back" onclick="window.location='/home.html'"></div>
+</body>
+<script type="application/javascript" src="js/change_style.js"></script>
+</html>
+<br/>
+<br/>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .top_text {
+        height: 50px;
+        font-family: Noto Sans;
+        font-weight: bold;
+        font-size: 20px;
+        background: rgba(183, 242, 255, 1);
+        background-size: cover;
+        opacity: 1;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttons {
+        height: 30px;
+        width: 99%;
+        opacity: 1;
+        position: absolute;
+        bottom: 15px;
+    }
+
+    .no {
+        width: 80px;
+        height: 30px;
+        color: rgba(20, 0, 255, 1);
+        position: relative;
+        float: left;
+        font-family: Noto Sans;
+        font-weight: 600;
+        font-size: 14px;
+        opacity: 1;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .yes {
+        width: 60px;
+        height: 30px;
+        background: rgba(20, 0, 255, 1);
+        color: rgba(249, 249, 249, 1);
+        border-radius: 5px;
+        position: relative;
+        right: 20px;
+        float:right;
+        font-family: Noto Sans;
+        font-weight: 600;
+        font-size: 14px;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .back {
+        opacity: 1;
+        position: absolute;
+        top: 80px;
+        left: 30px;
+        border: solid rgba(0, 0, 0, 1);
+        padding: 8px;
+        border-width: 0 5px 5px 0;
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        cursor: pointer;
+    }
+
+    .choose_style {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-25%, 0);
+    }
+</style>

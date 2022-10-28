@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="top_text">Is it good?</div>
+<div class="drawing"></div>
+<div class="buttons">
+    <span class="yes" onclick="window.location='/drawing_part.html'">Start Drawing</span>
+</div>
+</div>
+<div class="arrow" onclick="window.location='/home.html'"></div>
+</body>
+<script type="text/javascript" src="/DrawingTeacher/DrawingTeacher/www/js/see_result.js"></script>
+</html>
+<br/>
+<br/>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .top_text {
+        height: 50px;
+        font-family: Noto Sans;
+        font-weight: bold;
+        font-size: 20px;
+        background: rgba(183, 242, 255, 1);
+        background-size: cover;
+        opacity: 1;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .drawing {
+
+    }
+
+    .buttons {
+        height: 30px;
+        width: 99%;
+        opacity: 1;
+        position: absolute;
+        bottom: 15px;
+    }
+
+    .yes {
+        width: 150px;
+        height: 30px;
+        background: rgba(20, 0, 255, 1);
+        color: rgba(249, 249, 249, 1);
+        border-radius: 5px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Noto Sans;
+        font-weight: 600;
+        font-size: 14px;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .arrow {
+        opacity: 1;
+        position: absolute;
+        top: 80px;
+        left: 30px;
+        border: solid rgba(0, 0, 0, 1);
+        padding: 8px;
+        border-width: 0 5px 5px 0;
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        cursor: pointer;
+    }
+</style>
