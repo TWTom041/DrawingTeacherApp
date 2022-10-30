@@ -1,10 +1,5 @@
-document.addEventListener("deviceready", onDeviceReady, false);
+let video = document.querySelector("#videoElement")
 
-var video = document.querySelector("#videoElement")
-var db;
-
-
-function onDeviceReady() {}
 
 if (navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices.getUserMedia({ video: true })

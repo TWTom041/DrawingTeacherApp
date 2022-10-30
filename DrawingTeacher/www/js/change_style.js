@@ -2,9 +2,9 @@ let file_in = document.querySelector("input[class='choose_style']")
 file_in.addEventListener("change", ccc);
 
 function ccc() {
-    var preview = document.querySelector('img');
-    var file = file_in.files[0];
-    var reader = new FileReader();
+    let preview = document.querySelector('img');
+    let file = file_in.files[0];
+    let reader = new FileReader();
 
     reader.onloadend = function () {
         preview.src = reader.result;
