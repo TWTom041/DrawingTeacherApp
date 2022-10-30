@@ -13,17 +13,21 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "dependencies": {
-    "cordova-browser": "^6.0.0"
+    "cordova-browser": "^6.0.0",
+    "cordova-windows": "^7.0.1"
   },
   "cordova": {
     "platforms": [
-      "browser"
+      "browser",
+      "windows",
+      "android"
     ],
     "plugins": {
       "cordova-sqlite-storage": {}
     }
   },
   "devDependencies": {
+    "cordova-android": "^8.1.0",
     "cordova-sqlite-storage": "github:brodysoft/Cordova-SQLitePlugin"
   }
 }

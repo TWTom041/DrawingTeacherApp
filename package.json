@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "cordova": "^11.0.0"
+    "cordova": "^11.0.0",
+    "cordova-android": "^11.0.0"
   }
 }

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="enUS">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet"/>
+    <title>Change Style</title>
 </head>
 <body>
 <div class="top_text">Change style?</div>
@@ -12,9 +13,8 @@
 <div class="buttons">
     <span class="no">No, thanks.</span>
     <span class="yes" onclick="call_change_style();">Yes</span>
-    </div>
 </div>
-<div class="back" onclick="window.location='/home.html'"></div>
+<div class="back" onclick="window.location='home.html'"></div>
 </body>
 <script type="application/javascript" src="js/change_style.js"></script>
 </html>
@@ -32,15 +32,15 @@
 
     .top_text {
         height: 50px;
-        font-family: Noto Sans;
+        font-family: Noto Sans, sans-serif;
         font-weight: bold;
         font-size: 20px;
         background: rgba(183, 242, 255, 1);
         background-size: cover;
         opacity: 1;
         position: relative;
-        top: 0px;
-        left: 0px;
+        top: 0;
+        left: 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -60,7 +60,7 @@
         color: rgba(20, 0, 255, 1);
         position: relative;
         float: left;
-        font-family: Noto Sans;
+        font-family: Noto Sans, sans-serif;
         font-weight: 600;
         font-size: 14px;
         opacity: 1;
@@ -79,8 +79,8 @@
         border-radius: 5px;
         position: relative;
         right: 20px;
-        float:right;
-        font-family: Noto Sans;
+        float: right;
+        font-family: Noto Sans, sans-serif;
         font-weight: 600;
         font-size: 14px;
         opacity: 1;

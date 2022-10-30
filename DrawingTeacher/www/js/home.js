@@ -1,21 +1,5 @@
-document.addEventListener("deviceready", onDeviceReady, false);
+let video = document.querySelector("#videoElement")
 
-var video = document.querySelector("#videoElement")
-var db;
-
-
-function onDeviceReady() {
-    db = window.sqlitePlugin.openDatabase({ name: "dt.db" });
-    // b64str, b64str, b64str, b64str, list(cvt2 json str), list(cvt2 json str), b64str
-    db.transaction(function(tx) {
-        tx.executeSql('CREATE TABLE IF NOT EXISTS Imgs (id, content, style, original, pred, prev, drew)');
-        tx.executeSql('INSERT INTO Imgs VALUES (?,?,?,?,?,?,?)', [1, '', '', '', '', '', '', '']);
-    }, function(error) {
-        console.log('Transaction ERROR: ' + error.message);
-    }, function() {
-        console.log('Populated database OK');
-    });
-}
 
 if (navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices.getUserMedia({ video: true })
@@ -34,9 +18,9 @@ function change_page() {
     canvas.height = video.videoHeight;
     canvas.getContext('2d').drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
     let image_data_url = canvas.toDataURL('image/jpeg');
-    image_data_url = image_data_url.replace(/^data:image\/(png|jpg);base64,/, "")
+    image_data_url = image_data_url.replace(/^data:image\/(png|jpg|jpeg);base64,/, "")
     localStorage.setItem("original", image_data_url)
     // data url of the image
     console.log(image_data_url);
-    window.location='/change_style.html'
+    window.location='change_style.html'
 }
