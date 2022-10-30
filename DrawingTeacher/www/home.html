@@ -7,7 +7,7 @@
 <body>
 <div class="top_text">What to draw?</div>
 <div class="window">
-    <video width="384" height="384" autoplay="true" id="videoElement"></video>
+    <video autoplay="autoplay" id="videoElement"></video>
 </div>
 <div class="v2_4" onclick="change_page()"></div>
 </body>
@@ -43,8 +43,8 @@
 
     .window {
         aspect-ratio: 1 / 1;
-        width: 384px;
-        height: 384px;
+        width: 70%;
+        height: 70%;
         background: rgba(217, 217, 217, 1);
         opacity: 1;
         position: fixed;
@@ -55,7 +55,13 @@
         transform: translateX(-50%);
         margin-top: 75px;
         overflow: hidden;
+    }
 
+    #videoElement {
+        position: relative;
+        right: 50%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .v2_4 {

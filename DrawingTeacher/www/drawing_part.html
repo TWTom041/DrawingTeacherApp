@@ -6,12 +6,12 @@
 <body>
 <div class="main_window">
     <div class="back"></div>
-    <div class="menus">
-        <div class="menu_page"></div>
-        <div class="menu_bar"></div>
+    <div class="window">
+        <video autoplay="autoplay" id="videoElement"></video>
     </div>
 </div>
 </body>
+<script type="application/javascript" src="js/drawing_part.js"></script>
 </html> <br/><br/>
 <style>* {
     box-sizing: border-box;
@@ -45,39 +45,26 @@ body {
     cursor: pointer;
 }
 
-.menus {
-    width: 360px;
-    height: 681px;
-    background: rgba(255, 255, 255, 1) no-repeat center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 592px;
-    left: 0;
-    overflow: hidden;
+#videoElement {
+    position: relative;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.menu_page {
-    width: 360px;
-    height: 681px;
+.window {
+    aspect-ratio: 1 / 1;
+    width: 80%;
+    height: 80%;
     background: rgba(217, 217, 217, 1);
     opacity: 1;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.menu_bar {
-    width: 140px;
-    height: 3px;
-    background: rgba(95, 95, 95, 1);
-    opacity: 1;
-    position: absolute;
-    top: 11px;
-    left: 110px;
-    border-radius: 3px;
+    bottom: 20px;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 75px;
     overflow: hidden;
 }
 </style>

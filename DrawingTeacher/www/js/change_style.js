@@ -28,7 +28,7 @@ function call_change_style() {
         let headers = {
             "Content-Type": "application/json",
         }
-        fetch("http://127.0.0.1:5000/style_transfer", {
+        fetch(localStorage.getItem("server_url") + "/style_transfer", {
             method: "POST",
             headers: headers,
             mode: 'cors',
@@ -40,9 +40,10 @@ function call_change_style() {
             .then((response) => {
                 console.log(response);
                 localStorage.setItem("original", response["stylized"])
+                window.location = "see_result.html"
             })
             .catch((error) => {
-                console.log(`[ERROR] ${error}`);
+                alert(`[ERROR] ${error}`);
             })
     } else {
         alert("Please choose style image.");
