@@ -2,7 +2,7 @@
   "name": "hsnu.dtcher",
   "displayName": "DrawingTeacher",
   "version": "1.0.0",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "description": "Drawing Teacher",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,8 @@
   "keywords": [
     "ecosystem:cordova"
   ],
-  "author": "Apache Cordova Team",
-  "license": "Apache-2.0",
+  "author": "Team of 葉安之, 周楷蓉, 蔡昕翰, 呂辰昕",
+  "license": "",
   "dependencies": {
     "cordova-browser": "^6.0.0",
     "cordova-windows": "^7.0.1"
@@ -22,12 +22,9 @@
       "windows",
       "android"
     ],
-    "plugins": {
-      "cordova-sqlite-storage": {}
-    }
+    "plugins": {}
   },
   "devDependencies": {
-    "cordova-android": "^8.1.0",
-    "cordova-sqlite-storage": "github:brodysoft/Cordova-SQLitePlugin"
+    "cordova-android": "^8.1.0"
   }
 }
