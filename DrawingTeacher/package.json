@@ -13,6 +13,7 @@
   "author": "Team of 葉安之, 周楷蓉, 蔡昕翰, 呂辰昕",
   "license": "",
   "dependencies": {
+    "cordova": "^11.0.0",
     "cordova-browser": "^6.0.0",
     "cordova-windows": "^7.0.1"
   },

@@ -9,7 +9,7 @@
 <label>
     <input type="file" class="choose_style">
 </label>
-<img src="" alt="">
+<img class="style_image" src="" alt="">
 <div class="buttons">
     <span class="no">No, thanks.</span>
     <span class="yes" onclick="call_change_style();">Yes</span>
@@ -108,5 +108,12 @@
         top: 50%;
         left: 50%;
         transform: translate(-25%, 0);
+    }
+
+    .style_image {
+        position: relative;
+        right: 50%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 </style>

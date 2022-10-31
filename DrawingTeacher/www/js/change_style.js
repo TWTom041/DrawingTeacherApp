@@ -28,6 +28,7 @@ function call_change_style() {
         let headers = {
             "Content-Type": "application/json",
         }
+        document.querySelector(".yes").disabled = true;
         fetch(localStorage.getItem("server_url") + "/style_transfer", {
             method: "POST",
             headers: headers,
