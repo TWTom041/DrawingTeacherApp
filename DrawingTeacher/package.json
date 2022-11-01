@@ -23,9 +23,12 @@
       "windows",
       "android"
     ],
-    "plugins": {}
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    }
   },
   "devDependencies": {
-    "cordova-android": "^8.1.0"
+    "cordova-android": "^8.1.0",
+    "cordova-plugin-whitelist": "^1.3.5"
   }
 }

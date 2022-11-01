@@ -14,6 +14,7 @@ function set_url() {
     localStorage.setItem("server_url", document.querySelector(".server_url").value)
     let headers = {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
     }
     fetch(localStorage.getItem("server_url") + "/", {
         method: "GET",
@@ -23,7 +24,7 @@ function set_url() {
         .then((response) => {
             response.json()
                 .then(data => {
-                    console.log(f2);
+                    alert(data);
                     if (data === "running") {
                         if (f2) {
                             tohome();
@@ -32,7 +33,8 @@ function set_url() {
                     }
                 })
                 .catch(err => {
-                    alert(err);
+                    document.querySelector(".v8_9").innerHTML=err;
+                    alert(err.toString());
                 });
         })
         .catch((err) => {
