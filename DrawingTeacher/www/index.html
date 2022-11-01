@@ -6,12 +6,15 @@
 </head>
 <body>
 <div class="v8_2">
+    <div class="url_setter">
     <label>
+        Server URL:
         <input class="server_url" type="text" placeholder="http://127.0.0.1:5000">
+        <button class="set_button">set</button>
     </label>
-    <button class="set_button">set</button>
-    <span class="v8_8">Drawing Teacher</span>
-    <span class="v8_9">A project by HSNU students</span>
+    </div>
+    <div class="v8_8">Drawing Teacher</div>
+    <div class="v8_9">A project by HSNU students</div>
 </div>
 </body>
 <script type="text/javascript" src="cordova.js"></script>
@@ -23,27 +26,20 @@
     }
 
     body {
+        font-family: Noto Sans, sans-serif;
         font-size: 14px;
     }
 
     .v8_2 {
-        width: 360px;
-        height: 640px;
-        background: rgba(255, 255, 255, 1);
-        margin: 76px;
-        opacity: 1;
-        position: relative;
-        top: 0;
-        left: 0;
-        overflow: hidden;
     }
 
     .v8_8 {
-        width: 169px;
         color: rgba(0, 0, 0, 1);
-        position: absolute;
+        position: relative;
         top: 495px;
+        right: 50%;
         left: 50%;
+        transform: translateX(-50%);
         font-family: Noto Sans, sans-serif;
         font-weight: Bold;
         font-size: 20px;
@@ -52,15 +48,25 @@
     }
 
     .v8_9 {
-        width: 275px;
         color: rgba(0, 0, 0, 0.4);
-        position: absolute;
-        top: 552px;
+        position: relative;
+        top: 550px;
+        right: 50%;
         left: 50%;
+        transform: translateX(-50%);
         font-family: Noto Sans, sans-serif;
         font-weight: Bold;
         font-size: 20px;
         opacity: 1;
+        text-align: center;
+    }
+
+    .url_setter {
+        top: 200px;
+        position: relative;
+        right: 50%;
+        left: 50%;
+        transform: translateX(-50%);
         text-align: center;
     }
 </style>
