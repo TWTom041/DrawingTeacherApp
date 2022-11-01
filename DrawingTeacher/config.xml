@@ -1,18 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="hsnu.dtcher" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<widget id="hsnu.dtcher" version="1.0.0" xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>DrawingTeacher</name>
     <description>Drawing Teacher</description>
     <author email="tom0986820022@gmail.com" href="">
         Team of 葉安之, 周楷蓉, 蔡昕翰, 呂辰昕
     </author>
-    <content src="index.html" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
+    <content src="index.html"/>
+    <allow-intent href="http://*/*"/>
+    <allow-intent href="https://*/*"/>
+    <access origin="*" />
     <config-file target="AndroidManifest.xml" parent="/*" mode="merge">
-        <uses-permission android:name="android.permission.CAMERA" />
+        <uses-permission android:name="android.permission.CAMERA"/>
         <uses-permission android:name="android.permission.INTERNET"/>
     </config-file>
-    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
-    <preference name="AndroidExtraFilesystems" value="files,cache, sdcard, cache-external, files-external" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility"/>
+    <preference name="AndroidExtraFilesystems" value="files, cache, sdcard, cache-external, files-external"/>
 </widget>
 

@@ -24,7 +24,6 @@ function set_url() {
         .then((response) => {
             response.json()
                 .then(data => {
-                    alert(data);
                     if (data === "running") {
                         if (f2) {
                             tohome();
@@ -33,8 +32,7 @@ function set_url() {
                     }
                 })
                 .catch(err => {
-                    document.querySelector(".v8_9").innerHTML=err;
-                    alert(err.toString());
+                    alert(err);
                 });
         })
         .catch((err) => {
