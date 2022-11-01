@@ -8,6 +8,8 @@
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <allow-navigation href="*"/>
+    <access origin="*" />
     <config-file target="AndroidManifest.xml" parent="/*" mode="merge">
         <uses-permission android:name="android.permission.CAMERA" />
         <uses-permission android:name="android.permission.INTERNET"/>
