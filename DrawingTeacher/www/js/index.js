@@ -14,7 +14,6 @@ function set_url() {
     localStorage.setItem("server_url", document.querySelector(".server_url").value)
     let headers = {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
     }
     fetch(localStorage.getItem("server_url") + "/", {
         method: "GET",

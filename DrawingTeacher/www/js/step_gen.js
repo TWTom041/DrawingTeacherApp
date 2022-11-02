@@ -11,6 +11,7 @@ function get_line() {
     fetch(localStorage.getItem("server_url") + "/get_outline", {
         method: "POST",
         headers: headers,
+        mode:"cors",
         body: JSON.stringify(body)
     })
         .then((response) => {
@@ -18,11 +19,12 @@ function get_line() {
         })
         .then((response) => {
             localStorage.setItem("outline", response["outline"])
+            document.querySelector(".drawing").src = "data:image/png;base64," + localStorage.getItem("outline");
         })
         .catch((error) => {
             alert(`[ERROR] ${error}`);
         })
-    document.querySelector(".drawing").src = localStorage.getItem("outline");
+
 }
 
 function gen_steps() {

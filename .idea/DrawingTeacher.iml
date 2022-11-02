@@ -4,6 +4,8 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/DrawingTeacher/node_modules/cordova-android/spec/e2e/fixtures/cordova-plugin-fake/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/DrawingTeacher/node_modules/cordova-lib/src/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/DrawingTeacher/node_modules/cordova-lib/templates/platforms" />
       <excludeFolder url="file://$MODULE_DIR$/DrawingTeacher/node_modules/cordova-windows/spec/unit/fixtures/testProj/platforms" />
       <excludeFolder url="file://$MODULE_DIR$/DrawingTeacher/platforms" />
       <excludeFolder url="file://$MODULE_DIR$/node_modules/cordova-lib/src/platforms" />
