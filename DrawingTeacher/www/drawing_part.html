@@ -10,7 +10,10 @@
         <video autoplay="autoplay" id="videoElement"></video>
     </div>
     <div class="drawing_window">
-        <canvas id="processed"></canvas>
+        <canvas id="processed" width="384" height="384"></canvas>
+    </div>
+    <div class="now_drawing_window">
+        <canvas id="processing" width="384" height="384"></canvas>
     </div>
     <div class="buttons">
         <span class="yes">Next Move</span>
@@ -63,8 +66,13 @@ body {
 
 #processed {
     position: relative;
-    width: 384px;
-    height: 384px;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#processing {
+    position: relative;
+    z-index: 100;
     right: 50%;
     left: 50%;
     transform: translateX(-50%);
@@ -113,6 +121,21 @@ body {
 }
 
 .drawing_window {
+    aspect-ratio: 1 / 1;
+    width: 384px;
+    height: 384px;
+    background: rgba(217, 217, 217, 0);
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    bottom: 20px;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 75px;
+    overflow: hidden;
+}
+.now_drawing_window {
     aspect-ratio: 1 / 1;
     width: 384px;
     height: 384px;
