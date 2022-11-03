@@ -45,7 +45,8 @@ function gen_steps() {
             return response.json();
         })
         .then((response) => {
-            localStorage.setItem("steps", response["steps"])
+            localStorage.setItem("steps", JSON.stringify(response["steps"]))
+            window.location = "drawing_part.html"
         })
         .catch((error) => {
             alert(`[ERROR] ${error}`);

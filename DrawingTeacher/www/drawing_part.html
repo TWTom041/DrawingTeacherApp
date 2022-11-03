@@ -9,9 +9,17 @@
     <div class="window">
         <video autoplay="autoplay" id="videoElement"></video>
     </div>
+    <div class="drawing_window">
+        <canvas id="processed"></canvas>
+    </div>
+    <div class="buttons">
+        <span class="yes">Next Move</span>
+    </div>
+
 </div>
 </body>
-<script type="application/javascript" src="js/drawing_part.js"></script>
+<script type="text/javascript" src="js/drawing_part.js"></script>
+<!--script async type="text/javascript" src="js/opencv.js" onload="onOpenCvReady();"></script-->
 </html> <br/><br/>
 <style>* {
     box-sizing: border-box;
@@ -34,6 +42,7 @@ body {
 
 .back {
     opacity: 1;
+    z-index: 9999;
     position: absolute;
     top: 80px;
     left: 30px;
@@ -52,11 +61,62 @@ body {
     transform: translateX(-50%);
 }
 
+#processed {
+    position: relative;
+    width: 384px;
+    height: 384px;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.buttons {
+    height: 30px;
+    opacity: 1;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    right: 50%;
+}
+
+.yes {
+    width: 150px;
+    height: 30px;
+    background: rgba(20, 0, 255, 1);
+    color: rgba(249, 249, 249, 1);
+    border-radius: 5px;
+    position: relative;
+    font-family: Noto Sans, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
 .window {
     aspect-ratio: 1 / 1;
     width: 80%;
     height: 80%;
     background: rgba(217, 217, 217, 1);
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    bottom: 20px;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 75px;
+    overflow: hidden;
+}
+
+.drawing_window {
+    aspect-ratio: 1 / 1;
+    width: 384px;
+    height: 384px;
+    background: rgba(217, 217, 217, 0);
     opacity: 1;
     position: fixed;
     top: 0;
