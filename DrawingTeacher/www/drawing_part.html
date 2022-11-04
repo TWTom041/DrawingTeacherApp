@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="enUS">
+<html lang="enUS" xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Drawing Part</title>
 </head>
 <body>
 <div class="main_window">
+
     <div class="back"></div>
     <div class="window">
         <video autoplay="autoplay" id="videoElement"></video>
+    </div>
+    <div class="painting_window">
+        <canvas id="painting" width="800" height="800"></canvas>
     </div>
     <div class="drawing_window">
         <canvas id="processed" width="384" height="384"></canvas>
@@ -16,8 +20,10 @@
         <canvas id="processing" width="384" height="384"></canvas>
     </div>
     <div class="sliders">
-        <input type="range" min="0" max="384" value="0" class="slider" id="margintop">
-        <input type="range" min="0" max="200" value="100" class="slider" id="size-modifier">
+        <label for="margintop">margin top</label><input type="range" min="0" max="384" value="75" class="slider" id="margintop">
+        <br>
+        <label for="size-modifier">magnification</label><input type="range" min="0" max="200" value="100" class="slider"
+                                                  id="size-modifier">
     </div>
     <div class="buttons">
         <span class="yes">Next Move</span>
@@ -29,6 +35,7 @@
 <!--script async type="text/javascript" src="js/opencv.js" onload="onOpenCvReady();"></script-->
 </html> <br/><br/>
 <style>* {
+    font-family: Noto Sans, sans-serif;
     box-sizing: border-box;
 }
 
@@ -37,8 +44,6 @@ body {
 }
 
 .main_window {
-    width: 360px;
-    height: 640px;
     background: rgba(255, 255, 255, 1);
     opacity: 1;
     position: relative;
@@ -49,7 +54,7 @@ body {
 
 .back {
     opacity: 1;
-    z-index: 9999;
+    z-index: 2;
     position: absolute;
     top: 80px;
     left: 30px;
@@ -74,12 +79,19 @@ body {
     left: 50%;
     transform: translateX(-50%);
 }
+
 #processing {
     position: relative;
-    z-index: 100;
     right: 50%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+#painting {
+    position:absolute;
+    z-index: 1;
+    width:100%;
+    height:100%;
 }
 
 .buttons {
@@ -92,6 +104,7 @@ body {
 }
 
 .yes {
+    z-index: 2;
     width: 150px;
     height: 30px;
     background: rgba(20, 0, 255, 1);
@@ -124,6 +137,29 @@ body {
     overflow: hidden;
 }
 
+.painting_window {
+    aspect-ratio: 1 / 1;
+    width: 800px;
+    height: 800px;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    bottom: 20px;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 75px;
+    overflow: hidden;
+}
+
+#painting {
+    z-index: 3;
+    position: relative;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .drawing_window {
     aspect-ratio: 1 / 1;
     width: 384px;
@@ -138,7 +174,9 @@ body {
     transform: translateX(-50%);
     margin-top: 75px;
     overflow: hidden;
+    border: 2px #333333 solid;
 }
+
 .now_drawing_window {
     aspect-ratio: 1 / 1;
     width: 384px;
@@ -153,5 +191,9 @@ body {
     transform: translateX(-50%);
     margin-top: 75px;
     overflow: hidden;
+}
+
+.sliders {
+    z-index: 2;
 }
 </style>
