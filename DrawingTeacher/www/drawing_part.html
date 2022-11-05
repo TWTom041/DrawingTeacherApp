@@ -19,11 +19,12 @@
     <div class="now_drawing_window">
         <canvas id="processing" width="384" height="384"></canvas>
     </div>
-    <div class="sliders">
+    <div class="controllers">
         <label for="margintop">margin top</label><input type="range" min="0" max="384" value="75" class="slider" id="margintop">
         <br>
         <label for="size-modifier">magnification</label><input type="range" min="0" max="200" value="100" class="slider"
                                                   id="size-modifier">
+        <button id="clear_canvas">clear</button>
     </div>
     <div class="buttons">
         <span class="yes">Next Move</span>
@@ -193,7 +194,7 @@ body {
     overflow: hidden;
 }
 
-.sliders {
+.controllers {
     z-index: 2;
 }
 </style>

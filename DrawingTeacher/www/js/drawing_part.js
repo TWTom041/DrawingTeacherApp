@@ -10,12 +10,16 @@ document.querySelector("#size-modifier").addEventListener("input", changeSize)
 document.querySelector("#margintop").addEventListener("input", addMargin)
 document.body.addEventListener("mousemove", drawUserLine)
 
-document.querySelector("#painting").onmousedown = function() {
+window.onmousedown = function() {
     mouseDown = true;
 }
 
-document.querySelector("#painting").onmouseup = function() {
+window.onmouseup = function() {
     mouseDown = false;
+}
+
+document.querySelector("#clear_canvas").onclick = () => {
+    document.querySelector("#painting").getContext("2d").clearRect(0,0,document.querySelector("#painting").width, document.querySelector("#painting").height);
 }
 
 if (navigator.mediaDevices.getUserMedia) {
