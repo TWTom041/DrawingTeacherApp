@@ -25,6 +25,8 @@
         <label for="size-modifier">magnification</label><input type="range" min="0" max="200" value="100" class="slider"
                                                   id="size-modifier">
         <button id="clear_canvas">clear</button>
+        <button id="download">download</button>
+        <button id="shut_down_cam">camera on/off</button>
     </div>
     <div class="buttons">
         <span class="yes">Next Move</span>
@@ -42,6 +44,7 @@
 
 body {
     font-size: 14px;
+    touch-action: none;
 }
 
 .main_window {

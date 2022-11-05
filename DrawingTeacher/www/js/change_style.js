@@ -1,5 +1,9 @@
 let file_in = document.querySelector("input[class='choose_style']")
 file_in.addEventListener("change", ccc);
+document.querySelector(".no").onclick = () => {
+    window.location = "see_result.html"
+}
+
 
 function ccc() {
     let preview = document.querySelector('img');

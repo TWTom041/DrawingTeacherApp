@@ -9,6 +9,9 @@
 <div class="window">
     <video autoplay="autoplay" id="videoElement"></video>
 </div>
+<label>
+    <input type="file" class="choose_content">
+</label>
 <div class="v2_4" onclick="change_page()"></div>
 </body>
 <script type="text/javascript" src="js/home.js"></script>
@@ -64,6 +67,10 @@
         transform: translateX(-50%);
     }
 
+    .choose_content {
+        position: absolute;
+        bottom: 40px;
+    }
     .v2_4 {
         width: 60px;
         height: 60px;
