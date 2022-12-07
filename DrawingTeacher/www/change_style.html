@@ -6,10 +6,24 @@
 </head>
 <body>
 <div class="top_text">Change style?</div>
-<label>
-    <input type="file" class="choose_style">
-</label>
-<img class="style_image" src="" alt="">
+<div class="styler">
+    <label>
+        <select name="style_method" class="choose_style_type">
+            <optgroup label="fast style transfer for arbitrary styles">
+                <option value="FST">FST</option>
+            </optgroup>
+            <optgroup label="AnimeGAN">
+                <option value="Hayao">Hayao</option>
+                <option value="Hayao_v2">Hayao v2</option>
+                <option value="Paprika_v2">Paprika v2</option>
+                <option value="Shinkai_v2">Shinkai v2</option>
+            </optgroup>
+        </select>
+        <input type="file" class="choose_style">
+    </label>
+    <img class="style_image" src="" alt="">
+</div>
+
 <div class="buttons">
     <span class="no">No, thanks.</span>
     <span class="yes" onclick="call_change_style();">Yes</span>
@@ -102,12 +116,25 @@
         -webkit-transform: rotate(135deg);
         cursor: pointer;
     }
+    .styler {
+        position: fixed;
+        left: 50%;
+        right: 50%;
+
+    }
 
     .choose_style {
         position: relative;
-        top: 50%;
         left: 50%;
-        transform: translate(-25%, 0);
+        right: 50%;
+        transform: translate(-50%);
+    }
+
+    .choose_style_type {
+        position: relative;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%);
     }
 
     .style_image {

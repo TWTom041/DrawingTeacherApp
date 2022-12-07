@@ -28,9 +28,14 @@ function get_line() {
 }
 
 function gen_steps() {
+    let s_method = document.querySelector(".sort_method").value
     let body = {
         "outline": localStorage.getItem("outline"),
         "sort_method": document.querySelector(".sort_method").value
+    }
+
+    if (s_method === "ss") {
+        body.content = localStorage.getItem("content")
     }
     let headers = {
         "Content-Type": "application/json",
